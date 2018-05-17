@@ -10,6 +10,7 @@ import struct CoreGraphics.CGGeometry.CGSize
 import func TapAdditionsKit.clamp
 import class TapNibView.TapNibView
 import class UIKit.UIColor.UIColor
+import class UIKit.UIFont.UIFont
 import class UIKit.UIImage.UIImage
 import class UIKit.UIImageView.UIImageView
 import class UIKit.UITextField.UITextField
@@ -82,10 +83,10 @@ public final class TapSearchView: TapNibView {
     
     private struct Constants {
         
-        fileprivate static let idleHeight: CGFloat = 46.0
+        fileprivate static let idleHeight: CGFloat = 52.0
         fileprivate static let minimalHeight: CGFloat = 16.0
         fileprivate static let searchHolderViewSizeInset: CGFloat = 16.0
-        fileprivate static let maximalCornerRadius: CGFloat = 5.0
+        fileprivate static let maximalCornerRadius: CGFloat = 11.0
         
         @available(*, unavailable) private init() {}
     }
@@ -100,7 +101,21 @@ public final class TapSearchView: TapNibView {
         }
     }
     
-    @IBOutlet private weak var textField: UITextField?
+    @IBOutlet private weak var textField: UITextField? {
+        
+        didSet {
+            
+            let font = UIFont.systemFont(ofSize: 17.0)
+            let color = UIColor(hex: "7B7B83")!
+            let attributes: [NSAttributedStringKey: Any] = [
+            
+                .foregroundColor: color,
+                .font: font
+            ]
+            
+            self.textField?.attributedPlaceholder = NSAttributedString(string: "Search", attributes: attributes)
+        }
+    }
     
     @IBOutlet private weak var searchHolderView: UIView?
     
@@ -119,9 +134,10 @@ public final class TapSearchView: TapNibView {
         
         let heightDifference = Constants.idleHeight - Constants.minimalHeight
         let heightWhenAlpha0 = Constants.minimalHeight + 0.5 * heightDifference
+        let heightWhenAlpha1 = Constants.idleHeight
         
         let height = clamp(value: self.bounds.height, low: heightWhenAlpha0, high: Constants.idleHeight)
-        let contentAlpha = ( height - heightWhenAlpha0 ) / heightDifference
+        let contentAlpha = ( height - heightWhenAlpha0 ) / ( heightWhenAlpha1 - heightWhenAlpha0 )
         self.searchHolderView?.subviews.forEach { $0.alpha = contentAlpha }
     }
     
