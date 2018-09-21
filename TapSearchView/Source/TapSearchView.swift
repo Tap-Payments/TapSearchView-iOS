@@ -5,16 +5,16 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
-import struct CoreGraphics.CGBase.CGFloat
-import struct CoreGraphics.CGGeometry.CGSize
-import func TapAdditionsKit.clamp
-import class TapNibView.TapNibView
-import class UIKit.UIColor.UIColor
-import class UIKit.UIFont.UIFont
-import class UIKit.UIImage.UIImage
-import class UIKit.UIImageView.UIImageView
-import class UIKit.UITextField.UITextField
-import class UIKit.UIView.UIView
+import struct   CoreGraphics.CGBase.CGFloat
+import struct   CoreGraphics.CGGeometry.CGSize
+import func     TapAdditionsKit.clamp
+import class    TapNibView.TapNibView
+import class    UIKit.UIColor.UIColor
+import class    UIKit.UIFont.UIFont
+import class    UIKit.UIImage.UIImage
+import class    UIKit.UIImageView.UIImageView
+import class    UIKit.UITextField.UITextField
+import class    UIKit.UIView.UIView
 
 /// Tap Search View class, replacement to Apple's `UISearchBar`.
 public final class TapSearchView: TapNibView {
@@ -107,7 +107,7 @@ public final class TapSearchView: TapNibView {
             
             let font = UIFont.systemFont(ofSize: 17.0)
             let color = UIColor(hex: "7B7B83")!
-            let attributes: [NSAttributedStringKey: Any] = [
+            let attributes: [NSAttributedString.Key: Any] = [
             
                 .foregroundColor: color,
                 .font: font
@@ -161,12 +161,12 @@ public final class TapSearchView: TapNibView {
     
     private func addTextChangeObserver() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextChanged(_:)), name: .UITextFieldTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextChanged(_:)), name: UITextField.textDidChangeNotification, object: nil)
     }
     
     private func removeTextChangedObserver() {
         
-        NotificationCenter.default.removeObserver(self, name: .UITextFieldTextDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UITextField.textDidChangeNotification, object: nil)
     }
     
     @objc private func textFieldTextChanged(_ notification: Notification) {
