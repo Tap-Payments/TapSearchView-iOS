@@ -2,7 +2,7 @@
 //  Bundle+Additions.swift
 //  TapSearchView
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 internal extension Bundle {
@@ -13,7 +13,7 @@ internal extension Bundle {
     /// Tap Search View Resources bundle.
     internal static let tapSearchViewResources: Bundle = {
         
-        guard let result = Bundle(for: TapSearchView.self).childBundle(named: Constants.tapSearchViewResourcesBundleName) else {
+        guard let result = Bundle(for: TapSearchView.self).tap_childBundle(named: Constants.tapSearchViewResourcesBundleName) else {
             
             fatalError("There is no \(Constants.tapSearchViewResourcesBundleName) bundle.")
         }

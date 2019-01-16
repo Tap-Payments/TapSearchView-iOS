@@ -1,55 +1,55 @@
 PODS:
-  - SwiftLint (0.27.0)
-  - TapAdditionsKit/CoreGraphics/CGContext (1.1)
-  - TapAdditionsKit/CoreGraphics/CGImage (1.1):
+  - SwiftLint (0.29.3)
+  - TapAdditionsKit/CoreGraphics/CGContext (1.2)
+  - TapAdditionsKit/CoreGraphics/CGImage (1.2):
     - TapAdditionsKit/CoreGraphics/CGContext
-  - TapAdditionsKit/CoreGraphics/CGSize (1.1):
+  - TapAdditionsKit/CoreGraphics/CGSize (1.2):
     - TapAdditionsKit/SwiftStandartLibrary/Numeric
-  - TapAdditionsKit/Foundation/Bundle (1.1)
-  - TapAdditionsKit/Foundation/Locale (1.1)
-  - TapAdditionsKit/Foundation/NumberFormatter (1.1)
-  - TapAdditionsKit/ObjectiveC/NSObject (1.1)
-  - TapAdditionsKit/QuartzCore/CALayer (1.1)
-  - TapAdditionsKit/SwiftStandartLibrary/Array (1.1):
+  - TapAdditionsKit/Foundation/Bundle (1.2)
+  - TapAdditionsKit/Foundation/Locale (1.2)
+  - TapAdditionsKit/Foundation/NumberFormatter (1.2)
+  - TapAdditionsKit/ObjectiveC/NSObject (1.2)
+  - TapAdditionsKit/QuartzCore/CALayer (1.2)
+  - TapAdditionsKit/SwiftStandartLibrary/Array (1.2):
     - TapAdditionsKit/SwiftStandartLibrary/Numeric
-  - TapAdditionsKit/SwiftStandartLibrary/Comparable (1.1)
-  - TapAdditionsKit/SwiftStandartLibrary/Int (1.1)
-  - TapAdditionsKit/SwiftStandartLibrary/Numeric (1.1)
-  - TapAdditionsKit/SwiftStandartLibrary/Sequence (1.1)
-  - TapAdditionsKit/SwiftStandartLibrary/String (1.1):
+  - TapAdditionsKit/SwiftStandartLibrary/Comparable (1.2)
+  - TapAdditionsKit/SwiftStandartLibrary/Int (1.2)
+  - TapAdditionsKit/SwiftStandartLibrary/Numeric (1.2)
+  - TapAdditionsKit/SwiftStandartLibrary/Sequence (1.2)
+  - TapAdditionsKit/SwiftStandartLibrary/String (1.2):
     - TapAdditionsKit/Foundation/Locale
     - TapAdditionsKit/Foundation/NumberFormatter
     - TapAdditionsKit/SwiftStandartLibrary/Int
-  - TapAdditionsKit/Tap/ClassProtocol (1.1)
-  - TapAdditionsKit/Tap/TypeAlias (1.1)
-  - TapAdditionsKit/UIKit/UIColor (1.1):
+  - TapAdditionsKit/Tap/ClassProtocol (1.2)
+  - TapAdditionsKit/Tap/TypeAlias (1.2)
+  - TapAdditionsKit/UIKit/UIColor (1.2):
     - TapAdditionsKit/SwiftStandartLibrary/Array
     - TapAdditionsKit/SwiftStandartLibrary/Int
     - TapAdditionsKit/SwiftStandartLibrary/String
-  - TapAdditionsKit/UIKit/UIImage (1.1):
+  - TapAdditionsKit/UIKit/UIImage (1.2):
     - TapAdditionsKit/CoreGraphics/CGImage
     - TapAdditionsKit/CoreGraphics/CGSize
     - TapAdditionsKit/SwiftStandartLibrary/Array
     - TapAdditionsKit/SwiftStandartLibrary/Sequence
     - TapAdditionsKit/UIKit/UIColor
-  - TapAdditionsKit/UIKit/UIScreen (1.1)
-  - TapAdditionsKit/UIKit/UIView (1.1):
-    - TapAdditionsKit/UIKit/UIView/AnimationOptions (= 1.1)
-    - TapAdditionsKit/UIKit/UIView/KeyframeAnimationOptions (= 1.1)
-    - TapAdditionsKit/UIKit/UIView/UIView (= 1.1)
-  - TapAdditionsKit/UIKit/UIView/AnimationOptions (1.1)
-  - TapAdditionsKit/UIKit/UIView/KeyframeAnimationOptions (1.1)
-  - TapAdditionsKit/UIKit/UIView/UIView (1.1):
+  - TapAdditionsKit/UIKit/UIScreen (1.2)
+  - TapAdditionsKit/UIKit/UIView (1.2):
+    - TapAdditionsKit/UIKit/UIView/AnimationOptions (= 1.2)
+    - TapAdditionsKit/UIKit/UIView/KeyframeAnimationOptions (= 1.2)
+    - TapAdditionsKit/UIKit/UIView/UIView (= 1.2)
+  - TapAdditionsKit/UIKit/UIView/AnimationOptions (1.2)
+  - TapAdditionsKit/UIKit/UIView/KeyframeAnimationOptions (1.2)
+  - TapAdditionsKit/UIKit/UIView/UIView (1.2):
     - TapAdditionsKit/ObjectiveC/NSObject
     - TapAdditionsKit/QuartzCore/CALayer
     - TapAdditionsKit/SwiftStandartLibrary/String
     - TapAdditionsKit/Tap/TypeAlias
     - TapAdditionsKit/UIKit/UIImage
     - TapAdditionsKit/UIKit/UIScreen
-  - TapNibView (1.0.1.1):
-    - TapAdditionsKit/ObjectiveC/NSObject (= 1.1)
-    - TapAdditionsKit/Tap/ClassProtocol (= 1.1)
-    - TapAdditionsKit/UIKit/UIView (= 1.1)
+  - TapNibView (1.0.2):
+    - TapAdditionsKit/ObjectiveC/NSObject (>= 1.2)
+    - TapAdditionsKit/Tap/ClassProtocol (>= 1.2)
+    - TapAdditionsKit/UIKit/UIView (>= 1.2)
 
 DEPENDENCIES:
   - SwiftLint
@@ -65,9 +65,9 @@ SPEC REPOS:
     - TapNibView
 
 SPEC CHECKSUMS:
-  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  TapAdditionsKit: 140a088872313f07b047d803e7fa513a1f8d4f6d
-  TapNibView: 32659d2d4337575bf5efc200784e3681dff07a83
+  SwiftLint: bfa7ca7b4d170cfaf0d236ca3ffd969e88a2f002
+  TapAdditionsKit: ec0e7e864ad1590e0c2f62230100e2621499458f
+  TapNibView: 3f789102e629d216047f2beeb709a4d00df22e74
 
 PODFILE CHECKSUM: 305ba0cac1f22b240c050dd730dba49e3eb48b2a
 

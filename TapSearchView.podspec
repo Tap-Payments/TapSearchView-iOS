@@ -1,5 +1,5 @@
-TapAdditionsKitDependencyVersion    = '1.1'     unless defined? TapAdditionsKitDependencyVersion
-TapNibViewDependencyVersion         = '1.0.1.1' unless defined? TapNibViewDependencyVersion
+TapAdditionsKitDependencyVersion    = '>= 1.2'		unless defined? TapAdditionsKitDependencyVersion
+TapNibViewDependencyVersion         = '>= 1.0.2'	unless defined? TapNibViewDependencyVersion
 
 Pod::Spec.new do |tapSearchView|
     
@@ -9,7 +9,7 @@ Pod::Spec.new do |tapSearchView|
     tapSearchView.name                  = 'TapSearchView'
     tapSearchView.summary               = 'Customizable replacement of builtin UISearchBar'
     tapSearchView.requires_arc          = true
-    tapSearchView.version               = '1.0.1'
+    tapSearchView.version               = '1.0.2'
     tapSearchView.license               = { :type => 'MIT', :file => 'LICENSE' }
     tapSearchView.author                = { 'Tap Payments' => 'hello@tap.company' }
     tapSearchView.homepage              = 'https://github.com/Tap-Payments/TapSearchView-iOS'

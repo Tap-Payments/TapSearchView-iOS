@@ -2,12 +2,12 @@
 //  TapSearchView.swift
 //  TapSearchView
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 import struct   CoreGraphics.CGBase.CGFloat
 import struct   CoreGraphics.CGGeometry.CGSize
-import func     TapAdditionsKit.clamp
+import func     TapAdditionsKit.tap_clamp
 import class    TapNibView.TapNibView
 import class    UIKit.UIColor.UIColor
 import class    UIKit.UIFont.UIFont
@@ -106,7 +106,7 @@ public final class TapSearchView: TapNibView {
         didSet {
             
             let font = UIFont.systemFont(ofSize: 17.0)
-            let color = UIColor(hex: "7B7B83")!
+            let color = UIColor(tap_hex: "7B7B83")!
             let attributes: [NSAttributedString.Key: Any] = [
             
                 .foregroundColor: color,
@@ -136,7 +136,7 @@ public final class TapSearchView: TapNibView {
         let heightWhenAlpha0 = Constants.minimalHeight + 0.5 * heightDifference
         let heightWhenAlpha1 = Constants.idleHeight
         
-        let height = clamp(value: self.bounds.height, low: heightWhenAlpha0, high: Constants.idleHeight)
+        let height = tap_clamp(value: self.bounds.height, low: heightWhenAlpha0, high: Constants.idleHeight)
         let contentAlpha = ( height - heightWhenAlpha0 ) / ( heightWhenAlpha1 - heightWhenAlpha0 )
         self.searchHolderView?.subviews.forEach { $0.alpha = contentAlpha }
     }
@@ -146,9 +146,9 @@ public final class TapSearchView: TapNibView {
         guard let nonnullHolderView = self.searchHolderView else { return }
         
         let desiredCornerRadius = 0.5 * min(nonnullHolderView.bounds.width, self.bounds.height - Constants.searchHolderViewSizeInset)
-        let cornerRadius = clamp(value: desiredCornerRadius, low: 0.0, high: Constants.maximalCornerRadius)
+        let cornerRadius = tap_clamp(value: desiredCornerRadius, low: 0.0, high: Constants.maximalCornerRadius)
         
-        nonnullHolderView.cornerRadius = cornerRadius
+        nonnullHolderView.tap_cornerRadius = cornerRadius
     }
     
     private func endEditingIfHeightIsLessThanIdle() {
@@ -180,7 +180,7 @@ public final class TapSearchView: TapNibView {
     
     private func callDelegateIfTextChanged() {
         
-        let text = self.textField?.text ?? .empty
+        let text = self.textField?.text ?? .tap_empty
         if self.deliveredTextToDelegate != text {
             
             self.deliveredTextToDelegate = text
