@@ -11,7 +11,7 @@ internal extension Bundle {
     // MARK: Properties
     
     /// Tap Search View Resources bundle.
-    internal static let tapSearchViewResources: Bundle = {
+    static let tapSearchViewResources: Bundle = {
         
         guard let result = Bundle(for: TapSearchView.self).tap_childBundle(named: Constants.tapSearchViewResourcesBundleName) else {
             
