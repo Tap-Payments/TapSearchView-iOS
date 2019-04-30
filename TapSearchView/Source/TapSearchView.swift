@@ -120,7 +120,20 @@ public final class TapSearchView: TapNibView {
     @IBOutlet private weak var searchHolderView: UIView?
     
     private var deliveredTextToDelegate: String?
-    
+	
+	private var textDidChangeNotificationName: Notification.Name {
+		
+		#if swift(>=4.2)
+		
+		return UITextField.textDidChangeNotification
+		
+		#else
+		
+		return .UITextFieldTextDidChange
+		
+		#endif
+	}
+	
     // MARK: Methods
     
     private func updateUIAndInteraction() {
@@ -161,12 +174,12 @@ public final class TapSearchView: TapNibView {
     
     private func addTextChangeObserver() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextChanged(_:)), name: UITextField.textDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldTextChanged(_:)), name: self.textDidChangeNotificationName, object: nil)
     }
     
     private func removeTextChangedObserver() {
         
-        NotificationCenter.default.removeObserver(self, name: UITextField.textDidChangeNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: self.textDidChangeNotificationName, object: nil)
     }
     
     @objc private func textFieldTextChanged(_ notification: Notification) {
